@@ -1,24 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "noImplicitAny": false,//不需要显式的声明变量的类型
+    "target": "es5", //编译后的目标javascript版本，ES5，ES6等
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": true, //允许混合编译js文件
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true,//允许我们使用commentjs的方式引入文件，import * as React from 'react' => import React from 'react'
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": true, 
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "esnext", //配置代码的常用模块
+    "moduleResolution": "node", //决定了我们的编译方式，'node' 和 ‘classic’
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "isolatedModules": true, //编译器将每一个文件作为单独的模块来使用
+    "noEmit": true, //表示当发生错误时，编译器不要生成javascript代码
+    "jsx": "react"  //允许编译器支持react代码
   },
   "include": [
     "src"
